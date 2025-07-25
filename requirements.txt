@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 absl-py==2.3.1
 accelerate==0.25.0
 aiohttp==3.9.1
@@ -135,3 +136,17 @@ wheel==0.41.2
 widgetsnbextension==4.0.9
 xxhash==3.5.0
 yarl==1.9.4
+=======
+pytorch-lightning
+rouge
+rouge-score
+transformers[torch]
+unsloth
+gradio
+evaluate
+matplotlib
+seaborn
+jupyter
+notebook
+wandb
+>>>>>>> b573905e00820e9a852d627bdb4767b697c5b54f
