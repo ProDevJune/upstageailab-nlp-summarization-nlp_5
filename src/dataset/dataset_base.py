@@ -116,12 +116,9 @@ def prepare_train_dataset(config, preprocessor, data_dir, tokenizer):
     print(f'val_data:\n {val_data["dialogue"][0]}')
     print(f'val_label:\n {val_data["summary"][0]}')
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> b573905e00820e9a852d627bdb4767b697c5b54f
     # Enc-Dec 구조의 모델인 경우 Encoder input과 Decoder input을 구분.
     encoder_input_train , decoder_input_train, decoder_output_train = preprocessor.make_input(train_data)
     encoder_input_val , decoder_input_val, decoder_output_val = preprocessor.make_input(val_data)
