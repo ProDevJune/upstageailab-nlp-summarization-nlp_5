@@ -12,7 +12,9 @@ nlp-sum-lyj/
 │   ├── baseline.ipynb             # BART 기반 베이스라인
 │   ├── solar_api.ipynb            # Solar API 활용 코드
 │   ├── config.yaml                # 설정 파일
-│   └── requirements.txt           # 필요 패키지
+│   ├── requirements.txt           # 필요 패키지
+│   └── scripts/                   # 유틸리티 스크립트
+│       └── setup_aistages.sh      # AIStages 자동 설정
 ├── data/                          # 데이터셋
 │   ├── train.csv                  # 학습 데이터 (12,457개)
 │   ├── dev.csv                    # 검증 데이터 (499개)
@@ -24,10 +26,22 @@ nlp-sum-lyj/
     ├── solar_api_analysis.md       # Solar API 상세 분석
     ├── rouge_metrics_detail.md     # ROUGE 평가 지표 설명
     ├── project_structure_analysis.md # 프로젝트 구조 분석
-    └── uv_package_manager_guide.md # uv 패키지 관리자 가이드
+    ├── uv_package_manager_guide.md # uv 패키지 관리자 가이드
+    └── setup_guides/              # 설정 가이드
+        ├── aistages_environment_setup.md  # AIStages 환경 설정
+        ├── uv_environment_reset.md        # UV 환경 리셋 가이드
+        └── integration_guide.md           # 통합 가이드
 ```
 
 ## 🚀 빠른 시작
+
+### 0. AIStages 환경 자동 설정 (새로운 방법! 🆕)
+```bash
+# 프로젝트 루트에서 실행
+bash code/scripts/setup_aistages.sh
+```
+> 💡 이 스크립트는 UV 설치, Git 설정, 시스템 라이브러리, 패키지 설치를 자동으로 수행합니다.
+> 자세한 내용은 [AIStages 환경 설정 가이드](docs/setup_guides/aistages_environment_setup.md)를 참고하세요.
 
 ### 1. 환경 설정
 
@@ -181,7 +195,17 @@ inference:
 - [Solar API 상세 분석](docs/solar_api_analysis.md)
 - [ROUGE 평가 지표 설명](docs/rouge_metrics_detail.md)
 - [프로젝트 구조 분석](docs/project_structure_analysis.md)
-- [uv 패키지 관리자 가이드](docs/uv_package_manager_guide.md) 🆕
+- [uv 패키지 관리자 가이드](docs/uv_package_manager_guide.md)
+- [AIStages 환경 설정 가이드](docs/setup_guides/aistages_environment_setup.md) 🆕
+- **대회 가이드**:
+  - [하이퍼파라미터 튜닝 가이드](docs/competition_guides/hyperparameter_tuning_guide.md) 🆕
+  - [텍스트 데이터 분석 가이드](docs/competition_guides/text_data_analysis_guide.md) 🆕
+  - [WandB 실험 관리 가이드](docs/competition_guides/wandb_experiment_tracking_guide.md) 🆕
+  - [DialogSum 데이터셋 분석](docs/competition_guides/dialogsum_dataset_analysis.md) 🆕
+  - [통합 가이드](docs/competition_guides/competition_integration_guide.md) 🆕
+- **팀 진행 상황**:
+  - [팀 이슈 및 인사이트](docs/team_progress/team_issues_and_insights.md) 🆕
+  - [통합 액션 플랜](docs/team_progress/integration_action_plan.md) 🆕
 
 ## 🛠️ 트러블슈팅
 
@@ -225,6 +249,6 @@ config['tokenizer']['encoder_max_len'] = 1024
 
 ---
 
-**Last Updated**: 2025.01.14
+**Last Updated**: 2025.01.27
 **Author**: LYJ
 **Branch**: lyj
